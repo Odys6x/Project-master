@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>View Problems</h1>
+    <br/>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Type Of Problems</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for problem in problems %}
+
+            <tr>
+
+                <td>{{ problem.get_problem() }}</td>
+
+                <td>{{ problem.get_description() }}</td>
+
+                <td>{{ problem.get_location() }}</td>
+
+                <td>{{ problem.get_date() }}</td>
+
+                <td>{{ problem.get_status() }}</td>
+
+                <td></td>
+{#            "#}
+
+
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <a href="Report">Back</a>
+{% endblock %}

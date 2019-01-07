@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<title>Request for E-Excuse Pass</title>
+</head>
+<body>
+<script>
+	var posts = [];
+
+
+    function loadImage(e) {
+	    var file=e.target.files[0];	
+		if (isImageFile(file.name)) {
+			readImageAndDisplay(file,document.getElementById("myPhoto"));
+		}
+	 }
+	
+	 function isImageFile(str){
+		if (str.match(/.jpg/)||str.match(/.png/)||str.match(/.gif/))
+		  return true;
+		else
+		  return false;
+	 }
+	 
+	 function readImageAndDisplay(readFile,dest){
+		var reader = new FileReader();
+		reader.readAsDataURL(readFile);
+		reader.onload = function(imgsrc){
+			var base64Img=imgsrc.target.result;
+			dest.src=imgsrc.target.result;
+		}
+	 }
+</script>
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #0099ff;
+}
+.photo > div {
+	padding: 100px 40px 40px 175px;
+	display:inline-block;
+}
+
+button{
+margin-top:0px;
+margin-left:250px;
+}
+.tim{
+margin-top:20px;
+}
+
+img{
+height:300px;
+width:400px;
+}
+
+</style>
+
+
+<nav>
+<ul>
+  <li><a class="active" href="HomePage.html">Home</a></li>
+  <li><a href="#reportaproblem">Report a Problem</a></li>
+  <li><a href="Password.html">Reset Password</a></li>
+  <li><a href="ExcuseForm.html">Proof for E-Excuse Pass for Train Breakdown</a></li>
+</ul>
+  </nav>
+  
+  
+  
+  
+<div class="photo">
+<div>
+    <img id="myPhoto" src="" class="rounded" onload=""/><br>
+    <label id="image">
+    Upload : <input type="file" onchange="loadImage(event)">
+  </label>
+</div>
+<div class="info">
+ <form>
+ <input type="text" name="time" placeholder="Time" class="tim" required></br>
+ <input type="text" name="date" placeholder="Date" class="tim" required></br>
+ <input type="text" name="location" placeholder="Location" class="tim" required></br>
+ <input type="text" name="reason" placeholder="Reason" class="tim" required></br>
+ </form>
+</div>
+<br>
+<button onclick="storeData()">Submit</button>	
+</div>
+</div>
+</body>
+</html>

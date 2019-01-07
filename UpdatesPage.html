@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body></body>
+<head>
+  <meta charset="utf-8">
+  <title>Hi DexterYeah56!</title>
+</head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0 0 0 200px;
+    padding: 0;
+    overflow: hidden;
+    }
+
+li {
+    float: left;
+	border-right: 1px solid #bbb
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+	text-decoration: none;
+	background-color: #333;
+}
+
+li a:hover {
+    background-color: #0099ff;
+}
+#update {
+border-width:5px;
+border-color:black;
+border-style:solid;
+background-color:white;
+width:70%;
+float:right;
+margin-right:12em;
+text-align:center;
+}
+</style>
+
+<script>
+var button = document.querySelector('.button');
+
+button.onclick = function () {
+ var red = Math.floor(Math.random() * 256);
+ var blue = Math.floor(Math.random() * 256);
+ var green = Math.floor(Math.random() * 256);
+
+ this.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+};
+</script>
+
+<div>
+</div>
+
+<body background="https://upload.wikimedia.org/wikipedia/commons/1/1d/Kawasaki_c751_eunos.jpg">
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#reportaproblem">Report a Problem</a></li>
+    <li><a href="#account">Login/Register</a></li>
+    <li><a href="#Excuse Pass">Proof for E-Excuse Pass for Train Breakdown</a>
+</ul>
+
+<p id="update">
+Train breakdown on NS line between Orchard and Novena Stations heading towards Jurong East<br>
+UPDATE: The affected train has be restarted and will be sent to Bishan Depot for servicing and analysis. Please do not board the train. Train services will now resume between Orchard and Novena Stations. We thank you for your understanding.<br>
+11 November 2018 21:40
+</p>
+<p id="update">
+Train breakdown on NS line between Orchard and Novena Stations heading towards Jurong East<br>
+UPDATE: The affected train is currently being serviced by SMRT engineers. They estimate that it will take 2 hours to get the train operational. Shuttle buses are still being provided between the affected stations.<br>
+11 November 2018 19:37
+</p>
+<p id="update">
+Train breakdown on NS line between Orchard and Novena Stations heading towards Jurong East<br>
+ALERT: There has been a breakdown on the North-East line, in between Orchard and Novena Stations heading towards Jurong East. All passengers in the affected train are to disembark from the rear of the train and proceed to Orchard Station. Other passengers are advised to find alternative modes of transport. Shuttle buses will be provided to travel between the affected stations. Employees and Students requiring an excuse slip are to visit the Passenger Service Booth to claim an excuse slip. You can also press the 'E-Excuse Slip' Button to generate an excuse slip by scanning a QR Code provided at the affected stations. We apologize for any incenovenience caused.<br>
+11 November 2018 18:53
+</p>
+
+
+</body>
+
+</html>
